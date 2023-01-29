@@ -1,0 +1,30 @@
+import PropTypes from 'prop-types';
+import { Button } from './Feedback.styled';
+
+
+
+const Feedback = ({options, onLeaveFeedback}) => {
+  return (
+    <>
+      {options.map(option => {
+        return (
+          <Button
+            type="button"
+            key={option}
+            onClick={() => onLeaveFeedback(option)}
+          >
+            {option}
+          </Button>
+        );
+      })}
+    </>
+  );
+  
+}
+
+export default Feedback;
+
+// Feedback.PropTypes = {
+//   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+//   onLeaveFeedback: PropTypes.func.isRequired,
+// }
