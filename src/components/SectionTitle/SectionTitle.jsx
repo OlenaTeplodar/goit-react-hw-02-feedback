@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
-import { Title } from './SectionTitle.styled';
+import { Title, Container, Dotted } from './SectionTitle.styled';
 
-const SectionTitle = ({ text }) => {
-  return <Title>{text}</Title>;
+const SectionTitle = ({ text, children }) => {
+  return (
+    <Container>
+      <Dotted>
+        <Title>{text}</Title>
+        {children}
+      </Dotted>
+    </Container>
+  );
 };
 
 export default SectionTitle;

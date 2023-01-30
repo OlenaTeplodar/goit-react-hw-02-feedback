@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Container } from 'App.styled';
 import Feedback from 'components/Feedback';
-import  SectionTitle  from './components/SectionTitle';
-import  Message  from './components/Message';
-import  Statistics  from 'components/Statistics';
+import SectionTitle from './components/SectionTitle';
+import Message from './components/Message';
+import Statistics from 'components/Statistics';
 
 class App extends Component {
   state = {
@@ -42,18 +41,16 @@ class App extends Component {
     const positive = this.positiveFeedbackCount('good');
 
     return (
-      <Container>
-        <SectionTitle text="Please leave feedback!"></SectionTitle>
-
-        <Feedback
-          options={this.stateOptions}
-          onLeaveFeedback={this.onLeaveFeedback}
-        />
+      <>
+        <SectionTitle text="Please leave feedback!">
+          <Feedback
+            options={this.stateOptions}
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
+        </SectionTitle>
 
         {total !== 0 ? (
-          <>
-            <SectionTitle text="Statistics"></SectionTitle>
-
+          <SectionTitle text="Statistics">
             <Statistics
               good={good}
               neutral={neutral}
@@ -61,11 +58,11 @@ class App extends Component {
               total={total}
               positiveFeedback={positive}
             />
-          </>
+          </SectionTitle>
         ) : (
           <Message text="There is no feedback yet" />
         )}
-      </Container>
+      </>
     );
   }
 }
