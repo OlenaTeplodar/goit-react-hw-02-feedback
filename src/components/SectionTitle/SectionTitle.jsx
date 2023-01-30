@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Title, Container, Dotted } from './SectionTitle.styled';
 
 const SectionTitle = ({ text, children }) => {

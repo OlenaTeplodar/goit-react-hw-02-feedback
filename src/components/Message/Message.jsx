@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { MessageText } from './Message.styled';
 
  const Message = ({ text }) => {
