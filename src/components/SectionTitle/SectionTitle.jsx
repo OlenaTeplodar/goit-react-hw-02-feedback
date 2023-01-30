@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Title, Container, Dotted } from './SectionTitle.styled';
 
 const SectionTitle = ({ text, children }) => {
@@ -14,7 +14,7 @@ const SectionTitle = ({ text, children }) => {
 
 export default SectionTitle;
 
-// SectionTitle.PropTypes = {
-//   Title: PropTypes.string.isRequired,
-//   text: PropTypes.string.isRequired,
-// };
+SectionTitle.propTypes = {
+  Title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};

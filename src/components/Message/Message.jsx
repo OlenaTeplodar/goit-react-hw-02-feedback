@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { MessageText } from './Message.styled';
 
  const Message = ({ text }) => {
@@ -7,6 +7,6 @@ import { MessageText } from './Message.styled';
 
 export default Message;
 
-// Message.PropTypes = {
-//   text: PropTypes.string.isRequired,
-// };
+Message.propTypes = {
+  text: PropTypes.string.isRequired,
+};
